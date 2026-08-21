@@ -49,3 +49,7 @@ claude mcp add bezel \
 `cargo test` runs the e2e suite: real Postgres via testcontainers (Docker
 required), a real bezel over a real socket, and the bezel-mcp binary as a
 real subprocess driven over its stdio. No mocks.
+
+The suite builds the core from source via a `bezel = { path = "../bezel" }`
+dev-dependency, so clone this repo inside a persserver checkout (as
+`persserver/bezel-mcp`, next to `bezel/`) to run the tests.
